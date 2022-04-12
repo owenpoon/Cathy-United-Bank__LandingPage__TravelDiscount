@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+h1, h2, h3, p, a{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 500; 
+}
+span.block{
+    display: block;
+}
+.number{
+    margin: 0 3px;
+    position: relative;
+    top: 2px;
+}
+.deep-yellow{
+    color: #EE8B30;
+}
+.deep-green{
+    color: #467443;
+}
+.deep-red{
+    color: #E1444D;
+}
+.declaration{
+    color: #999999;
+}
+h2 > span.number{
+    font-size: 42px;
+}
+h3 span.number{
+    font-size: 33.5px;
+}
+ul.ellipse li::marker{
+    content: url(../img/list_ellipse.svg);
+}
+ul li > p{
+    position: relative; left: 10px;
+}
+
+/*Header*/
+header .navbar{
+    background: #FFF; height: 80px; 
+    padding-top: 0; padding-bottom: 0;
+    box-shadow: inset 0px -5px 0px #FFFD00, inset 0px 5px 0px #00A94F;
+}
+header .navbar-collapse{
+    flex-grow: 0;
+}
+header .container-fluid{
+    width: 85%;
+}
+header .navbar-expand-lg .navbar-nav {
+    flex-direction: row;
+    align-items: center;
+}
+
+header .navbar-brand{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+header .navbar img.logo{
+    width: 207px;
+}
+header .navbar a.nav-link{
+    font-size: 22px; cursor: pointer;
+    position: relative; top: 5px;
+    padding-top: 0; color: #2B4C29;
+    letter-spacing: 1px;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+}
+header .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 1.75rem;
+    padding-left: 1.75rem;
+}
+
+/*Main Contents*/
+section{
+    position: relative;
+}
+#opening .jumbotron {
+    background: url('../img/banner.svg') no-repeat;
+    width: 100%; height: 825px;
+    background-size: cover; 
+    margin-top: 80px; 
+    /*Inside Alignment*/
+    display: flex; justify-content: flex-start;
+    align-items: center;
+}
+#opening .jumbotron .content{
+    margin-left: 9em;
+    margin-top: -5em;
+}
+h1.top-topic{
+    font-weight: 500; font-size: 56px;
+    line-height: 70px; color: #FFF;
+    letter-spacing: 3px; margin-bottom: 1.3em;
+}
+h1.top-topic .long-word-spacing{
+    word-spacing: 45px;
+}
+p.sub-title{
+    font-size: 36px; font-weight: 700;
+    line-height: 48px; letter-spacing: 4px;
+    color: #FEE575;
+}
+p.declaration{
+    position: relative; top: -5px;
+}
+
+#second h2{
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 2px;
+    padding-top: 2.1em;
+}
+#second .content{
+    margin-top: 2.75em;
+}
+#second .content::before{
+    content: url(../img/green_decoration.svg);
+    position: absolute; z-index: -1;
+    margin-top: 2em;
+}
+#second .content::after{
+    content: url(../img/blue_decoration.svg);
+    position: absolute; z-index: -1;
+    right: 0; width: 800px; transform: translate(13em, -25em);
+}
+#second .content .section-1,
+#second .content .section-2{
+    padding: 24px; display: inline-block;
+    width: 800px; height: 460px;
+    vertical-align: top;
+    background: #E6F4E5; border-radius: 16px;
+    text-align: left; margin: 1em .75em;
+}
+#second .content .section-1 .logos .logo{
+    margin-left: 1em;
+}
+#second .content .section-2::before{
+    content: url(../img/leaves.svg);
+    position: absolute;
+    transform: translate(45.7em, -3.5em);
+}
+#second .content .section-2::after{
+    content: url(../img/family.svg);
+    position: absolute; right: 7.5em;
+    margin-top: 2em;
+}
+#second .content .section-1 h3,
+#second .content .section-2 h3{
+    font-weight: 700;
+    font-size: 30px;
+    letter-spacing: 1px;
+    margin-bottom: .6em;
+}
+#second .content .section-1 ul,
+#second .content .section-2 ul{
+    padding-left: .65em;
+}
+#second .content .section-1 p,
+#second .content .section-2 p{
+    font-size: 21.5px;
+    letter-spacing: 1px;
+}
+#second .content .section-2 ul{
+    margin-top: 23px;
+}
+#second .content .section-1 .declaration,
+#second .content .section-2 .declaration{
+    font-size: 18px;
+}
+#second .content .section-1 a,
+#second .content .section-2 a{
+    color: #467443;
+    text-decoration: underline;
+}
+#second .login-and-advice{
+    margin-top: 2em;
+}
+#second .login-and-advice a{
+    text-decoration: none;
+}
+
+div.logo{
+    width: 70px; height: 70px; margin: 0 .4em;
+    background: #FFF; border-radius: 100%;
+    filter: drop-shadow(0px 1.42857px 12.8571px rgba(70, 140, 65, 0.21));
+    /*Inside Alignment*/
+    display: inline-flex; justify-content: center; align-items: center;
+}
+div.logo img{
+    width: 55px;
+}
+.login-and-advice button{
+    padding: 12px 27px; margin: 0 1em;
+    width: 215px; border-radius: 40px;
+    font-weight: 400; font-size: 21.5px;
+    letter-spacing: 1.5px;
+}
+.login-and-advice button > div{
+    /*Inside-Alignment*/
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+.login-and-advice button.yellow-bg{
+    background: #FFA047; border: none;
+    color: #FFF;
+}
+.login-and-advice button.yellow-border{
+    background: none; border: 1.5px solid #FFA047;
+    color: #FFA047;
+}
+
+#third::after{
+    content: url(../img/blue_background.svg);
+    width: 100%; position: absolute; z-index: -1;
+    transform: translateY(-40%);
+}
+#third h2{
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 2px;
+    padding-top: 3em;
+}
+#third .owl-carousel .owl-nav button.owl-next, 
+#third .owl-carousel .owl-nav button.owl-prev, 
+#third .owl-carousel button.owl-dot {
+    background: #FFF;
+    color: #467443;
+    border: 2px solid #467443;
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+}
+#third .owl-carousel div.logo{
+    width: 55px; height: 55px; 
+    display: inline-flex;
+}
+#third .owl-carousel div.logo img{
+    width: 40px;
+}
+#third .slider .owl-item .slider-card article{
+    width: 75%; margin-left: 7px; padding-right: 1em;
+}
+#third .slider .owl-item .slider-card article h3{
+    font-size: 15px; letter-spacing: .5px;
+    margin-bottom: 5px;
+}
+#third .slider .owl-item .slider-card article p{
+    font-size: 8px; letter-spacing: .5px;
+}
+#third .slider .owl-item.active.center .slider-card article h3{
+    font-size: 17px;
+}
+#third .slider .owl-item.active.center .slider-card article p{
+    font-size: 14px;
+}
+
+#forth::before{
+    content: url(../img/cloud_background.svg);
+    width: 100%; position: absolute;
+    z-index: -1;
+}
+#forth h2{
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 2px;
+    padding-top: 7em;
+}
+
+
+#fifth h2{
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 2px;
+    padding-top: 3em;
+}

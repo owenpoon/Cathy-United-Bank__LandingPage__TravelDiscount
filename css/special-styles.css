@@ -1,0 +1,38 @@
+/*Banner-Slider*/
+.slider {
+  margin-top: 30px;
+  position: relative;
+}
+.slider .owl-item.active.center .slider-card {
+  transform: scale(1.35);
+  opacity: 1;
+}
+.slider-card {
+  padding: 0px 0px;
+  margin: 50px 15px 90px 15px;
+  transform: scale(0.9);
+  opacity: .4;
+  transition: all 0.3s ease;
+}
+.slider-card .inside-contents{
+  position: absolute; bottom: 10%; left: 7%;
+  color: #FFF; display: flex; width: 100%;
+  margin-right: 20px;
+}
+.owl-nav .owl-prev {
+  position: absolute;
+  top: calc(40%);
+  left: calc(29.5%); opacity: 1;
+  font-size: 20px !important;
+  z-index: 1;
+}
+.owl-nav .owl-next {
+  position: absolute;
+  top: calc(40%);
+  right: calc(29.5%); opacity: 1;
+  font-size: 20px !important;
+  z-index: 1;
+}
+.owl-dots {
+  display: none;
+}
