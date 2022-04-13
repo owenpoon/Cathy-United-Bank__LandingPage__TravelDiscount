@@ -1,9 +1,1 @@
-<svg width="1440" height="548" viewBox="0 0 1440 548" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1440.03 61.2897C880.031 -117.21 489.031 139.79 0.0308838 253.29C0.0308838 253.29 -519.969 984.79 10.5311 737.29C541.031 489.79 694.031 1184.29 1440.03 1020.29C2186.03 856.29 1440.03 61.2897 1440.03 61.2897Z" fill="url(#paint0_linear_67_461)"/>
-<defs>
-<linearGradient id="paint0_linear_67_461" x1="771.793" y1="0" x2="771.793" y2="1045.65" gradientUnits="userSpaceOnUse">
-<stop stop-color="#C4F18B"/>
-<stop offset="1" stop-color="#83C67F"/>
-</linearGradient>
-</defs>
-</svg>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 600"><defs><style>.cls-1{fill:url(#linear-gradient);}</style><linearGradient id="linear-gradient" x1="1000.48" y1="541.84" x2="1000.48" y2="-889.45" gradientTransform="matrix(1, 0, 0, -1, 0, 602)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c4f18b"/><stop offset="1" stop-color="#83c67f"/></linearGradient></defs><path class="cls-1" d="M1915.17,144.05C1148.64-100.28,613.44,251.5-55.9,406.86c0,0-711.78,1001.28,14.37,662.5S894,1681.21,1915.17,1456.73,1915.17,144.05,1915.17,144.05Z"/></svg>
