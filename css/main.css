@@ -40,6 +40,9 @@ ul.ellipse li::marker{
 ul li > p{
     position: relative; left: 10px;
 }
+.fixed-top{
+    position: fixed !important;
+}
 
 /*Header*/
 header > .clearfix:before, .clearfix:after, .dl-horizontal dd:before, 
@@ -59,8 +62,18 @@ header .navbar{
     padding-top: 0; padding-bottom: 0; margin-bottom: 0;
     box-shadow: inset 0px -5px 0px #FFFD00, inset 0px 5px 0px #00A94F;
 }
+header .navbar-toggler {
+    outline: none;
+    border: none;
+    position: relative;
+    top: 1.35em;
+}
+header .navbar-toggler:focus{
+    box-shadow: none;
+}
 header .navbar-collapse{
     flex-grow: 0;
+    padding-right: 0;
 }
 header .container-fluid{
     width: 85%;
@@ -69,7 +82,6 @@ header .navbar-expand-lg .navbar-nav {
     flex-direction: row;
     align-items: center;
 }
-
 header .navbar-brand{
     height: inherit;
 }
@@ -79,12 +91,59 @@ header .navbar img.logo{
 header .navbar a.nav-link{
     font-size: 22px; font-weight: 600;
     color: #2B4C29; letter-spacing: 1px; 
-    padding-right: 1.5em;
-    padding-left: 1.5em;
+    padding-right: 1.5em; text-decoration: none;
+    padding-left: 1.5em; position: relative;
+    top: 3px;
 }
 header .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 1.75rem;
     padding-left: 1.75rem;
+}
+header .navbar a.nav-link::after{
+    content: ''; background: #2B4C29;
+    width: 0%; height: 4px; top: .4em;
+    border-radius: 50px;  display: block;
+    position: relative; transition: all .3s ease;
+}
+header .navbar a.nav-link:hover:after{
+    width: 100%; 
+}
+header .navbar-toggler-icon i{
+    font-size: 25px;
+    color: #467443;
+}
+header > .container>.navbar-header, .container-fluid>.navbar-header, 
+.container>.navbar-collapse, .container-fluid>.navbar-collapse {
+    margin-left: 0; margin-right: 0;
+}
+
+/*Fixed-Bottom*/
+.advice{
+    width: 80%; height: 60px;
+    background: #FFF; margin: auto;
+    box-shadow: 0px 12px 28px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px); bottom: 2em;
+    border-radius: 32px; padding: 15px 0;
+}
+.advice > *{
+    display: inline-block;
+}
+.advice p{
+    color: #666666; font-size: 25px;
+    margin-bottom: 0; font-weight: 600;
+    letter-spacing: .75px; position: relative;
+    top: -2.15em;
+}
+.advice .percentage{
+    font-size: 70px; padding: 0 8px;
+}
+.advice .lets-apply{
+    position: relative; top: -3em;
+    left: 1.5em;
+}
+.advice .lets-apply h3{
+    color: #333333; font-size: 25px;
+    font-weight: 700; margin-top: 0;
 }
 
 /*Main Contents*/
@@ -118,6 +177,9 @@ p.sub-title{
 }
 p.declaration{
     position: relative; top: -5px;
+}
+img.family-in-banner{
+    display: none;
 }
 
 #second h2{
@@ -154,7 +216,7 @@ p.declaration{
 #second .content .section-2::before{
     content: url(../img/leaves.svg);
     position: absolute;
-    transform: translate(45.7em, -3.5em);
+    transform: translate(52em, -3.5em);
 }
 #second .content .section-2::after{
     content: url(../img/family.svg);
@@ -195,6 +257,9 @@ p.declaration{
 #second .login-and-advice a{
     text-decoration: none;
 }
+#second .login-and-advice > *{
+    display: inline-block;
+}
 
 div.logo{
     width: 70px; height: 70px; margin: 0 .4em;
@@ -206,25 +271,33 @@ div.logo{
 div.logo img{
     width: 55px;
 }
-.login-and-advice button{
+button.yellow-bg, button.yellow-border{
     padding: 12px 27px; margin: 0 1em;
     width: 215px; border-radius: 40px;
     font-weight: 400; font-size: 21.5px;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.5px; transition: all .5s ease;
 }
-.login-and-advice button > div{
+button.yellow-bg > div, button.yellow-border > div{
     /*Inside-Alignment*/
     display: flex; 
     justify-content: space-between;
     align-items: center;
 }
-.login-and-advice button.yellow-bg{
+button.yellow-bg{
     background: #FFA047; border: none;
     color: #FFF;
 }
-.login-and-advice button.yellow-border{
+button.yellow-border{
     background: none; border: 1.5px solid #FFA047;
     color: #FFA047;
+}
+
+button.yellow-bg:hover{
+    background: #ff7247;
+}
+button.yellow-border:hover{
+    border: 1.5px solid #ff7247;
+    color: #ff7247;
 }
 
 #third::after{
@@ -275,6 +348,39 @@ div.logo img{
 }
 #third .banner-carousel .owl-item.active.center .banner-carousel-card article p{
     font-size: 14px;
+}
+
+img.cloud-1{
+    position: absolute;
+    left: 12em;
+    z-index: 5;
+    bottom: 4em;
+    width: 100px;
+}
+img.cloud-2{
+    position: absolute;
+    bottom: 2em;
+    width: 95px;
+    left: 22em;
+    z-index: 5;
+}
+img.cloud-3 {
+    position: absolute;
+    bottom: 2em;
+    width: 120px;
+    right: 40em;
+    z-index: 5;
+}
+
+#third .discount{
+    margin-top: 1em;
+    display: none;
+}
+#third .discount > *{
+    display: inline-block;
+}
+#third .discount a{
+    text-decoration: none;
 }
 
 #forth::before{
@@ -345,34 +451,6 @@ div.logo img{
     line-height: 48px;
     letter-spacing: 2px;
     padding-top: 1.5em;
-}
-#fifth .advice{
-    width: 1200px; height: 60px;
-    background: #FFF; margin: auto;
-    box-shadow: 0px 12px 28px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(4px);
-    border-radius: 32px; padding: 12px 0;
-    margin-top: 5em; 
-}
-#fifth .advice > *{
-    display: inline-block;
-}
-#fifth .advice p{
-    color: #666666; font-size: 25px;
-    margin-bottom: 0; font-weight: 600;
-    letter-spacing: .75px; position: relative;
-    top: -2.05em;
-}
-#fifth .advice .percentage{
-    font-size: 70px; padding: 0 8px;
-}
-#fifth .advice .lets-apply{
-    position: relative; top: -3em;
-    left: 1.5em;
-}
-#fifth .advice .lets-apply h3{
-    color: #333333; font-size: 25px;
-    font-weight: 700; margin-top: 0;
 }
 
 footer#final{
@@ -446,4 +524,376 @@ footer .info p{
     font-size: 20px;
     margin-bottom: 0;
     line-height: 1.4;
+}
+
+@media only screen and (max-device-width: 990px){
+
+    /*Effect*/
+    button.yellow-bg:active{
+        background: #ff7247;
+    }
+    button.yellow-border:active{
+        border: 1.5px solid #ff7247;
+        color: #ff7247;
+    }
+    header .navbar a.nav-link:active::after{
+        width: 100%; 
+    }
+    #third .owl-carousel .owl-nav button.owl-next:hover, 
+    #third .owl-carousel .owl-nav button.owl-prev:hover{
+        background: #FFF;
+    }
+    .glyphicon-chevron-style:hover{
+        opacity: 1;
+    }
+
+}
+
+@media only screen and (max-width: 400px){
+    
+    #third::after {
+        transform: none;
+        top: 5em;
+    }
+    img.cloud-1 {
+        z-index: 5;
+        width: 50px;
+        top: 40%;
+        left: 1em;
+    }
+    img.cloud-2 {
+        position: absolute;
+        top: 42%;
+        width: 50px;
+        left: 5.2em;
+        z-index: 5;
+    }
+    img.cloud-3 {
+        position: absolute;
+        top: 50%;
+        width: 60px;
+        right: 1.3em;
+        z-index: 5;
+    }
+
+}
+
+@media only screen and (max-width: 530px){
+
+    #second .login-and-advice {
+        margin-top: 2em;
+        display: flex;
+        justify-content: center;
+    }
+    .login-and-advice button {
+        padding: 12px 27px;
+        margin: 0 10px;
+        width: 170px;
+        font-size: 18px;
+        letter-spacing: .5px;
+    }
+
+}
+
+@media only screen and (max-width: 765px){
+
+    header .navbar{
+        padding-bottom: 0 !important;
+    }
+    header .navbar-nav{
+        flex-direction: column !important;
+    }
+    .navbar-brand {
+        padding: 0 0; 
+        text-align: center;
+        width: 100%;
+    }
+    header .navbar img.logo {
+        position: relative;
+        top: -9px;
+    }
+    header nav .container-fluid{
+        width: 100%; 
+        background: #FFF;
+    }
+    header .navbar .nav-item{
+        margin: .5em 0;
+    }
+    .ready-block{
+        display: block;
+    }
+    
+}
+
+@media only screen and (min-width: 765px){
+
+    header .navbar-toggler {
+        display: none;
+    }
+    
+}
+
+@media only screen and (min-width: 765px) and (max-width: 1130px){
+
+    header .navbar img.logo {
+        width: 180px;
+    }
+    header .navbar-collapse {
+        flex-basis: 71% !important;
+        padding-left: 0; padding-right: 0;
+    }
+    header .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 20px;
+        padding-left: 0;
+    }
+    header .navbar a.nav-link {
+        font-size: 18px;
+        /* letter-spacing: 1px; */
+        text-decoration: none;
+        position: relative;
+        top: 3px;
+    }
+
+}
+
+@media only screen and (max-width: 990px){
+
+    header .container-fluid {
+        width: 100%;
+    }
+    #opening .jumbotron .content {
+        margin-left: 0; margin-top: -10em;
+    }
+    #opening .jumbotron {
+        background: url('../img/banner_mobile.jpg') no-repeat;
+        background-position-x: 100%;
+        height: 600px;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+    }
+    h1.top-topic {
+        font-weight: 500;
+        font-size: 33px;
+        line-height: 45px;
+        letter-spacing: 0;
+        text-align: center;
+        margin-bottom: .4em;
+    }
+    h1.top-topic .long-word-spacing {
+        word-spacing: 20px;
+    }
+    p.sub-title {
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 40px;
+        letter-spacing: 0;
+    }
+    #second .content {
+        margin-top: 2em;
+    }
+    #second h2 {
+        font-size: 26px;
+        line-height: 35px;
+        letter-spacing: 0;
+        padding-top: 0; 
+    }
+    #second .content .section-1 h3, 
+    #second .content .section-2 h3 {
+        font-weight: 700;
+        font-size: 25px;
+        letter-spacing: 0;
+        margin-top: 0;
+    }
+    h3 span.number {
+        font-size: 30px;
+    }
+    .number {
+        position: relative;
+        top: 0;
+    }
+    #second .content .section-1 p, 
+    #second .content .section-2 p {
+        font-size: 15px;
+    }
+    #second .content .section-1 .logos{
+        margin-left: 1em;
+    }
+    #second .content .section-1 .logos .logo {
+        margin-left: 0; 
+    }
+    #second .logos{
+        margin-top: 1.2em;
+    }
+    div.logo {
+        width: 45px;
+        height: 45px;
+        margin: 0 5px;
+    }
+    div.logo img {
+        width: 32px;
+    }
+    #second .content .section-1 .declaration, 
+    #second .content .section-2 .declaration {
+        font-size: 15px;
+    }
+    #third h2 {
+        font-size: 26px;
+        letter-spacing: 0;
+        line-height: 35px;
+        padding-top: 1em;
+    }
+    #third .discount{
+        display: block;
+        text-align: center;
+    }
+    #third button.yellow-border{
+        display: block;
+        margin: auto;
+        width: 230px;
+        font-size: 18px;
+        margin-left: 2em;
+    }
+    #third .discount img.visitor {
+        position: relative;
+        left: -1.5em;
+    }
+    #forth h2 {
+        font-size: 26px;
+        letter-spacing: 0;
+        line-height: 35px;
+        padding-top: 1em;
+        margin-bottom: .75em;
+    }
+    #fifth h2 {
+        font-size: 26px;
+        letter-spacing: 0;
+        line-height: 35px;
+        padding-top: 1em;
+        margin-bottom: .75em;
+    }
+    .carousel-inner-slider .info .object-logo img {
+        border-radius: 100%;
+        width: 55px;
+        height: 55px;
+    }
+    footer#final::before{
+        content: url(../img/green_bottom_background_mobile.png);
+        transform: translateY(-85%);
+    }
+    footer .appication {
+        margin-top: 4em;
+        display: block;
+    }
+    footer .appication .content {
+        padding-top: 1.25em;
+        text-align: center;
+    }
+    footer .appication a.domain {
+        display: none;
+    }
+    footer .appication ul{
+        margin-bottom: 15px;
+        padding-left: 0;
+    }
+    footer .appication ul li {
+        padding: 0px 10px;
+    }
+    footer .appication ul li a {
+        font-size: 15px;
+        letter-spacing: .5px;
+        top: -2px;
+    }
+    footer .info {
+        padding-left: 1.5em;
+    }
+    footer .info h2 > span.block{
+        display: inline;
+    }
+    footer .info .paragraphes {
+        margin-left: 0; 
+        padding-right: 2em;
+        padding-bottom: 1.75em;
+    }
+    footer .info p {
+        color: #8E8E8E;
+        font-size: 13px;
+        line-height: 1.25;
+        display: inline;
+    }
+    .advice {
+        width: 92%;
+        height: 85px;
+        border-radius: 32px;
+        padding: 15px 0;
+    }
+    .advice p {
+        font-size: 15px;
+        margin-bottom: 0;
+        font-weight: 600;
+        letter-spacing: .5px;
+        line-height: 1;
+        top: -1.3em;
+    }
+    .advice .percentage {
+        font-size: 48px;
+        padding: 0 8px;
+    }
+    .advice .lets-apply {
+        position: relative;
+        top: -2.2em; left: 1em; 
+    }
+    .advice .lets-apply h3 {
+        font-size: 18px;
+    }
+
+}
+
+@media only screen and (max-width: 1030px){
+
+    .banner-carousel-card .inside-contents h3{
+        color: #000;
+    }
+    .banner-carousel .owl-item .banner-carousel-card article p {
+        color: #999999;
+    }
+    #third .owl-carousel div.logo {
+        width: 40px; height: 40px;
+        position: relative; top: 8px;
+    }
+    .owl-item .banner-carousel-card .inside-contents{
+        color: inherit;
+        width: 80% !important;
+        margin: auto; display: flex;
+        position: relative; top: -4px;
+    }
+    #forth::before {
+        display: none;
+    }
+    .carousel{
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 1670px){
+
+    #second .content .section-1, #second .content .section-2 {
+        display: block; margin: auto;
+        width: 87%; height: inherit;
+        text-align: left; margin-bottom: 1.7em;
+    }
+    #second .content::after,
+    #second .content .section-2::after {
+        display: none;
+    }
+
+}
+
+@media only screen and (min-width: 401px) and (max-width: 1919px){
+    
+    img.cloud-1, img.cloud-2, img.cloud-3{
+        display: none;
+    }
+
 }
