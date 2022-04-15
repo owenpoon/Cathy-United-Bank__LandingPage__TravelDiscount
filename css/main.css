@@ -57,18 +57,9 @@ header > .clearfix:before, .clearfix:after, .dl-horizontal dd:before,
     content: none;
 }
 header .navbar{
-    background: #FFF; height: 80px; 
+    background: #FFF;  
     padding-top: 0; padding-bottom: 0; margin-bottom: 0;
     box-shadow: inset 0px -5px 0px #FFFD00, inset 0px 5px 0px #00A94F;
-}
-header .navbar-toggler {
-    outline: none;
-    border: none;
-    position: relative;
-    top: 1.35em;
-}
-header .navbar-toggler:focus{
-    box-shadow: none;
 }
 header .navbar-collapse{
     flex-grow: 0;
@@ -107,10 +98,49 @@ header .navbar a.nav-link::after{
 header .navbar a.nav-link:hover:after{
     width: 100%; 
 }
-header .navbar-toggler-icon i{
-    font-size: 25px;
-    color: #467443;
+
+header .navbar-toggler{
+    border-radius: 100%;
+    width: 50px; height: 50px;
+    font-size: 0; 
 }
+header .navbar-toggler:focus {
+    box-shadow: none;
+}
+header .navbar-toggler .navbar-toggler-icon {
+    width: 25px; height: 3px;
+    background: #467443;
+    border-radius: 5px; position: absolute;
+    transition: all .5s ease-in-out;
+    /*Inside-Alignment*/
+    display: flex; justify-content: center;
+    align-items: center;
+}
+header .navbar-toggler .navbar-toggler-icon::before,
+header .navbar-toggler .navbar-toggler-icon::after{
+    content: ''; position: absolute; height: 3px; 
+    background: #467443; border-radius: 5px;
+    transition: all .5s ease-in-out;
+    transition-delay: .1s;
+}
+header .navbar-toggler .navbar-toggler-icon::before{
+    width: 25px; transform: translateY(-8px);
+}
+header .navbar-toggler .navbar-toggler-icon::after{
+    width: 25px; transform: translate(0, 8px);
+}
+
+/* Navbar-Toggler-Icon-Animation */
+header .navbar-toggler.open .navbar-toggler-icon{
+    background: none; transition: all .2s ease;
+}
+header .navbar-toggler.open .navbar-toggler-icon::before{
+    height: 4px; transform: rotate(-45deg);
+}
+header .navbar-toggler.open .navbar-toggler-icon::after{
+    height: 4px; transform: rotate(45deg);
+}
+
 header > .container>.navbar-header, .container-fluid>.navbar-header, 
 .container>.navbar-collapse, .container-fluid>.navbar-collapse {
     margin-left: 0; margin-right: 0;
@@ -654,19 +684,19 @@ footer .info p{
 @media only screen and (max-width: 765px){
 
     header .navbar{
-        padding-bottom: 0 !important;
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
     header .navbar-nav{
         flex-direction: column !important;
     }
-    .navbar-brand {
-        padding: 0 0; 
-        text-align: center;
-        width: 100%;
-    }
     header .navbar img.logo {
-        position: relative;
-        top: -9px;
+        position: absolute;
+        top: 16px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
     }
     header nav .container-fluid{
         width: 100%; 
@@ -753,6 +783,9 @@ footer .info p{
 
     header .container-fluid {
         width: 100%;
+    }
+    header .navbar img.logo {
+        width: 150px;
     }
     #opening .jumbotron {
         height: 670px;

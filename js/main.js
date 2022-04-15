@@ -1,3 +1,16 @@
+//MenuBtn
+const menuBtn = document.querySelector('header .navbar-toggler');
+let menuOpen = false;
+menuBtn.addEventListener('click', () => {
+    if(!menuOpen) {
+        menuBtn.classList.add('open');
+        menuOpen = true;
+    } else{
+        menuBtn.classList.remove('open');
+        menuOpen = false;
+    }
+});
+
 // Owlcarousel
 $(document).ready(function(){
   $(".owl-carousel").owlCarousel({
