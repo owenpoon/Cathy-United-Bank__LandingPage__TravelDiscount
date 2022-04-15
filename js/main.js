@@ -53,7 +53,7 @@ gsap.fromTo('.fixed-bottom', {
     autoAlpha: 0, 
     duration: .5, ease: "sine.inOut",
     scrollTrigger:{
-        trigger: 'footer#final',
+        trigger: 'body',
         start: 'bottom 50%'
     }
 });

@@ -190,7 +190,7 @@ img.family-in-banner{
     font-size: 36px;
     line-height: 48px;
     letter-spacing: 2px;
-    padding-top: 2.1em;
+    padding-top: 1em;
     word-spacing: -8px;
 }
 #second .content{
@@ -340,7 +340,7 @@ button.yellow-border:hover{
     width: 40px;
 }
 #third .banner-carousel .owl-item .banner-carousel-card article{
-    width: 75%; margin-left: 7px; 
+    width: 85%; margin-left: 7px; 
     padding-right: 1em; margin-top: 3px !;
 }
 #third .banner-carousel .owl-item .banner-carousel-card article h3{
@@ -613,12 +613,24 @@ footer .info p{
     #opening .jumbotron img.family {
         width: 87%;
     }
+    footer#final::before{
+        content: url('../img/green_bottom_background_mobile.svg');  
+    }
+
 }
 
 @media only screen and (min-width: 531px) and (max-width: 705px) {
 
     #opening .jumbotron img.family {
         width: 67%;
+    }
+
+}
+
+@media only screen and (min-width: 531px) and (max-width: 900px){
+
+    footer#final::before{
+        content: url('../img/grren_bottom_background_900px.svg');  
     }
 
 }
@@ -663,8 +675,8 @@ footer .info p{
     header .navbar .nav-item{
         margin: .5em 0;
     }
-    .ready-block{
-        display: block;
+    #third .banner-carousel .owl-item .banner-carousel-card article {
+        width: 70%;
     }
     
 }
@@ -679,15 +691,18 @@ footer .info p{
 
 @media only screen and (min-width: 765px) and (max-width: 1130px){
 
+    header .container-fluid {
+        width: 95%;
+    }
     header .navbar img.logo {
-        width: 180px;
+        width: 150px;
     }
     header .navbar-collapse {
         flex-basis: 71% !important;
         padding-left: 0; padding-right: 0;
     }
     header .navbar-expand-lg .navbar-nav .nav-link {
-        padding-right: 20px;
+        padding-right: 15px;
         padding-left: 0;
     }
     header .navbar a.nav-link {
@@ -696,6 +711,15 @@ footer .info p{
         text-decoration: none;
         position: relative;
         top: 3px;
+    }
+
+}
+
+@media only screen and (min-width:765px) and (max-width: 1050px){
+
+    #opening .jumbotron .content {
+        margin-left: 1em; 
+        margin-top: -13em;
     }
 
 }
@@ -845,51 +869,66 @@ footer .info p{
         width: 55px;
         height: 55px;
     }
-    footer#final::before{
-        content: url('../img/green_bottom_background_mobile.svg');  
-    }
     footer .appication {
         margin-top: 4em;
         display: block;
-    }
-    footer .appication .content {
-        padding-top: 1.25em;
-        text-align: center;
-    }
-    footer .appication a.domain {
-        display: none;
     }
     footer .appication ul{
         margin-bottom: 15px;
         padding-left: 0;
     }
-    footer .appication ul li {
-        padding: 0px 10px;
+    footer .appication a.domain {
+        display: none;
     }
     footer .appication ul li a {
         font-size: 15px;
         letter-spacing: .5px;
         top: -2px;
     }
-    footer .info {
-        padding-left: 1.5em;
-    }
-    footer .info h2 > span.block{
-        display: inline;
-    }
-    footer .info .paragraphes {
-        margin-left: 0; 
-        padding-right: 2em;
-        padding-bottom: 1.75em;
-    }
     footer .info p {
         color: #8E8E8E;
         font-size: 13px;
         line-height: 1.25;
-        display: inline;
     }
     .advice {
-        width: 92%;
+        width: 92% !important;
+    }
+
+}
+
+@media only screen and (max-width: 1030px){
+
+    .banner-carousel-card .inside-contents h3{
+        color: #000;
+    }
+    .banner-carousel .owl-item .banner-carousel-card article p {
+        color: #999999;
+    }
+    #third .owl-carousel div.logo {
+        width: 40px; height: 40px;
+        position: relative; top: 8px;
+    }
+    #third .owl-carousel div.logo img {
+        width: 30px;
+    }
+    #third::after {
+        transform: none;
+        top: 7.6em;
+    }
+    .owl-item .banner-carousel-card .inside-contents{
+        color: inherit;
+        width: 80%;
+        margin: auto; display: flex;
+        position: relative; top: -4px;
+    }
+    #forth::before {
+        display: none;
+    }
+    .carousel{
+        width: 100%;
+    }
+    .advice {
+        width: 60%;
         height: 85px;
         border-radius: 32px;
         padding: 15px 0;
@@ -913,36 +952,54 @@ footer .info p{
     .advice .lets-apply h3 {
         font-size: 18px;
     }
+    .ready-block{
+        display: block;
+    }
 
 }
 
-@media only screen and (max-width: 1030px){
-
-    .banner-carousel-card .inside-contents h3{
-        color: #000;
-    }
-    .banner-carousel .owl-item .banner-carousel-card article p {
-        color: #999999;
-    }
+@media only screen and (min-width: 1030px) and (max-width: 1430px){
+    
     #third .owl-carousel div.logo {
-        width: 40px; height: 40px;
-        position: relative; top: 8px;
+        width: 50px;
+        height: 50px;
+        position: relative;
+        top: 8px;
     }
-    #third::after {
-        transform: none;
-        top: 7.6em;
+    #third .owl-carousel div.logo img {
+        width: 30px;
     }
-    .owl-item .banner-carousel-card .inside-contents{
-        color: inherit;
-        width: 80% !important;
-        margin: auto; display: flex;
-        position: relative; top: -4px;
+
+}
+
+@media only screen and (max-width: 1320px){
+    
+    footer .appication .content {
+        padding-top: 1.25em;
+        text-align: center;
     }
-    #forth::before {
-        display: none;
+    footer .appication ul li {
+        padding: 0px 10px;
     }
-    .carousel{
-        width: 100%;
+    footer .appication ul li a {
+        top: -2px;
+    }
+    footer .info {
+        padding-left: 1.5em;
+    }
+    footer .info h2 > span.block{
+        display: inline;
+    }
+    footer .info .paragraphes {
+        margin-left: 0; 
+        padding-right: 2em;
+        padding-bottom: 1.75em;
+    }
+    footer .info p {
+        display: inline;
+    }
+    footer .appication a.domain{
+        top: .7em;
     }
 
 }
