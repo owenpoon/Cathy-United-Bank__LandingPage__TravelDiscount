@@ -43,3 +43,17 @@ $('.carousel[data-type="multi"] .item').each(function() {
 		next.children(':first-child').clone().appendTo($(this));
 	}
 });
+
+//Animation
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.fromTo('.fixed-bottom', { 
+    autoAlpha: 1
+}, {
+    autoAlpha: 0, 
+    duration: .5, ease: "sine.inOut",
+    scrollTrigger:{
+        trigger: 'footer#final',
+        start: 'bottom 50%'
+    }
+});
