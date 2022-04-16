@@ -2,13 +2,20 @@
 
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+html.cant-scroll{
+    overflow-y: hidden;
 }
 h1, h2, h3, p, a{
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif !important;
     font-weight: 500; 
 }
 span.block{
     display: block;
+}
+.inline{
+    display: inline;
 }
 .number{
     margin: 0 3px;
@@ -42,6 +49,11 @@ ul li > p{
 .fixed-top{
     position: fixed !important;
 }
+.flex-outer-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /*Header*/
 header > .clearfix:before, .clearfix:after, .dl-horizontal dd:before, 
@@ -59,14 +71,15 @@ header > .clearfix:before, .clearfix:after, .dl-horizontal dd:before,
 header .navbar{
     background: #FFF;  
     padding-top: 0; padding-bottom: 0; margin-bottom: 0;
-    box-shadow: inset 0px -5px 0px #FFFD00, inset 0px 5px 0px #00A94F;
+    border-top: 4px solid #00A962;
+    border-bottom: 4px solid #FFFD00;
 }
 header .navbar-collapse{
     flex-grow: 0;
     padding-right: 0;
 }
 header .container-fluid{
-    width: 85%;
+    width: 100%;
 }
 header .navbar-expand-lg .navbar-nav {
     flex-direction: row;
@@ -181,19 +194,19 @@ section{
 }
 #opening .jumbotron {
     background: #83C67F;
-    width: 100%; height: 825px; 
+    width: 100%; height: 625px; 
     /*Inside Alignment*/
     display: flex; justify-content: flex-start;
     align-items: center;
 }
 #opening .jumbotron .content{
     margin-left: 9em;
-    margin-top: -5em;
+    margin-top: 0em;
 }
 #opening .jumbotron img.family{
     position: absolute;
     right: 0; bottom: 0;
-    width: 800px;
+    width: 670px;
 }
 h1.top-topic{
     font-weight: 500; font-size: 56px;
@@ -473,8 +486,8 @@ img.cloud-3 {
     background: #FFF;
     border-bottom-left-radius: 22px;
     border-bottom-right-radius: 22px;
-    border: 2px solid #ADADAD;
-    border-top: none; transition: all .5s ease;
+    box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.12);
+    transition: all .5s ease;
 }
 .carousel-inner-slider:hover .info{
     background: #F0F0F0;
@@ -578,6 +591,75 @@ footer .info p{
     line-height: 1.4;
 }
 
+/*Extra Content*/
+.notification{
+    width: 100%; height: 100%;
+}
+.notification > *{
+    height: inherit;
+}
+.notification.display-none{
+    display: none;
+}
+.notification.display-active{
+    display: block; position: absolute; 
+    top: 0; left: 0;
+}
+.black-bg{
+    background: rgba(0, 0, 0, .4);
+}
+.notification .notification-container{
+    background: #FFF; 
+    max-width: 1024px; max-height: 746px;
+    border-radius: 32px;
+}
+.notification .notification-container .contents{
+    overflow: scroll; overflow-x: hidden;
+    padding: 45px 50px; max-height: 500px;
+}
+.notification .notification-container .topic{
+    background: #83C67F; padding: 33px;
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+}
+.notification .notification-container .topic h2{
+    color: #FFF; font-size: 35px;
+    margin-top: 0; margin-bottom: 0;
+    display: inline; position: relative; 
+    left: 15px;
+}
+.notification .notification-container i.cross{
+    color: #FFF; font-size: 50px;
+    float: right; display: inline;
+    position: relative; top: -8.5px;
+    cursor: pointer;
+}
+.notification .notification-container .contents h3, 
+.notification .notification-container .contents p{
+    font-size: 18px;
+}
+.notification .notification-container .contents p{
+    line-height: 1.6;
+}
+.notification .notification-container .contents ol li::marker{
+    font-size: 20px;
+}
+.notification .notification-container .contents ol li{
+    padding-left: 1em;
+}
+.notification .notification-container .contents ul li{
+    padding-left: 0;
+}
+.notification .notification-container .button-area{
+    padding: 3em;
+}
+.notification .notification-container .button-area button{
+    width: 120px; cursor: pointer;
+}
+.notification .notification-container a{
+    color: #467443; text-decoration: underline;
+}
+
 @media only screen and (max-device-width: 990px){
 
     /*Effect*/
@@ -646,10 +728,45 @@ footer .info p{
     footer#final::before{
         content: url('../img/green_bottom_background_mobile.svg');  
     }
+    .notification .notification-container {
+        height: 668px !important;
+    }
+    .notification .notification-container .topic{
+        padding: 17px 33px;
+    }
+    .notification .notification-container .topic h2{
+        font-size: 25px; 
+    }
+    .notification .notification-container i.cross{
+        font-size: 35px; top: -4.5px;
+    }
+    .notification .notification-container .contents {
+        padding: 24px 16px;
+        max-height: 480px !important;
+    }
+    .notification .notification-container .contents article{
+        padding-right: 1.2em;
+    }
+    .notification .notification-container .contents h3, 
+    .notification .notification-container .contents p{
+        font-size: 16px;
+    }
+    .notification .notification-container .contents p{
+        line-height: 1.3;
+    }
+    .notification .notification-container .contents ol{
+        padding-left: 2.5em;
+    }
+    .notification .notification-container .contents ol li::marker{
+        font-size: 18px;
+    }
+    .notification .notification-container .button-area button{
+        font-size: 18px;
+    }
 
 }
 
-@media only screen and (min-width: 531px) and (max-width: 705px) {
+@media only screen and (min-width: 531px) and (max-width: 769px) {
 
     #opening .jumbotron img.family {
         width: 67%;
@@ -665,53 +782,15 @@ footer .info p{
 
 }
 
-@media only screen and (min-width: 706px) and (max-width: 900px) {
+@media only screen and (min-width: 769px) and (max-width: 1440px) {
 
     #opening .jumbotron img.family {
-        width: 58%;
+        width: 42%;
     }
 
 }
 
-@media only screen and (min-width: 901px) and (max-width: 1440px) {
-
-    #opening .jumbotron img.family {
-        width: 47%;
-    }
-
-}
-
-@media only screen and (max-width: 765px){
-
-    header .navbar{
-        padding-top: 5px;
-        padding-bottom: 5px;
-    }
-    header .navbar-nav{
-        flex-direction: column !important;
-    }
-    header .navbar img.logo {
-        position: absolute;
-        top: 16px;
-        left: 0;
-        right: 0;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    header nav .container-fluid{
-        width: 100%; 
-        background: #FFF;
-    }
-    header .navbar .nav-item{
-        margin: .5em 0;
-    }
-    #third .banner-carousel .owl-item .banner-carousel-card article {
-        width: 70%;
-    }
-    
-}
-
-@media only screen and (min-width: 765px){
+@media only screen and (min-width: 770px){
 
     header .navbar-toggler {
         display: none;
@@ -719,7 +798,7 @@ footer .info p{
     
 }
 
-@media only screen and (min-width: 765px) and (max-width: 1130px){
+@media only screen and (min-width: 770px) and (max-width: 1130px){
 
     header .container-fluid {
         width: 95%;
@@ -749,7 +828,17 @@ footer .info p{
 
     #opening .jumbotron .content {
         margin-left: 1em; 
-        margin-top: -13em;
+        margin-top: 0em;
+    }
+    h1.top-topic {
+        font-size: 45px;
+        line-height: 60px;
+        letter-spacing: 1px;
+    }
+    p.sub-title {
+        font-size: 30px;
+        line-height: 40px;
+        letter-spacing: 1px;
     }
 
 }
@@ -781,6 +870,31 @@ footer .info p{
 
 @media only screen and (max-width: 765px){
 
+    header .navbar{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    header .navbar-nav{
+        flex-direction: column !important;
+    }
+    header .navbar img.logo {
+        position: absolute;
+        top: 16px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    header nav .container-fluid{
+        width: 100%; 
+        background: #FFF;
+    }
+    header .navbar .nav-item{
+        margin: .5em 0;
+    }
+    #third .banner-carousel .owl-item .banner-carousel-card article {
+        width: 70%;
+    }
     header .container-fluid {
         width: 100%;
     }
@@ -1001,6 +1115,41 @@ footer .info p{
     }
     #third .owl-carousel div.logo img {
         width: 30px;
+    }
+
+}
+
+@media only screen and (max-width: 1130px){
+    
+    .notification .notification-container{
+        background: #FFF; 
+        width: 90%; height: 700px;
+        border-radius: 32px;
+    }
+    .notification .notification-container .contents{
+        max-height: 470px;
+    }
+    .notification .notification-container .contents h3, 
+    .notification .notification-container .contents p{
+        font-size: 18px;
+    }
+    .notification .notification-container .contents p{
+        line-height: 1.6;
+    }
+    .notification .notification-container .contents ol li::marker{
+        font-size: 20px;
+    }
+    .notification .notification-container .contents ol li{
+        padding-left: 1em;
+    }
+    .notification .notification-container .contents ul li{
+        padding-left: 0;
+    }
+    .notification .notification-container .button-area{
+        padding: 3em;
+    }
+    .notification .notification-container .button-area button{
+        width: 120px; cursor: pointer;
     }
 
 }

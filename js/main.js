@@ -13,30 +13,44 @@ menuBtn.addEventListener('click', () => {
 
 // Owlcarousel
 $(document).ready(function(){
-  $(".owl-carousel").owlCarousel({
-  	loop:true,
-    margin:10,
-    nav:true,
-	autoplay:true,
-    autoplayTimeout: 3000,
-    autoplayHoverPause:true,
-    center: true,
-    navText: [
-	    "<i class='fa-solid fa-arrow-left'></i>",
-	    "<i class='fa-solid fa-arrow-right'></i>"
-	],
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:1
-        },
-        1000:{
-            items:3
+    $(".owl-carousel").owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        autoplay:true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause:true,
+        center: true,
+        navText: [
+            "<i class='fa-solid fa-arrow-left'></i>",
+            "<i class='fa-solid fa-arrow-right'></i>"
+        ],
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:1
+            },
+            1000:{
+                items:3
+            }
         }
-    }
-  });
+    });
+
+    //Alert loader
+    $("button.open-notification").click(function(){
+        $('.notification').removeClass('display-none');
+        $('.notification').addClass('display-active');
+        $('html').addClass('cant-scroll');
+    });
+
+    $("button.close-notification, .cross").click(function(){
+        $('.notification').removeClass('display-active');
+        $('.notification').addClass('display-none');
+        $('html').removeClass('cant-scroll');
+    });
+
 });
 
 //carousel
