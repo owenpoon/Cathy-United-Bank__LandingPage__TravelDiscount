@@ -755,10 +755,16 @@ footer .info p{
         line-height: 1.55;
     }
     .notification .notification-container .contents ol{
-        padding-left: 2.5em;
+        padding-left: 3em;
     }
     .notification .notification-container .contents ol li::marker{
         font-size: 18px;
+    }
+    .notification .notification-container .contents ol li {
+        padding-left: 10px;
+    }
+    .notification .notification-container .contents ul li {
+        padding-left: 2px !important;
     }
     .notification .notification-container .button-area button{
         font-size: 18px;
@@ -931,6 +937,9 @@ footer .info p{
     }
     #second .content {
         margin-top: 2em;
+    }
+    #second .content .section-1, #second .content .section-2 {
+        padding: 15px 18px;
     }
     #second h2 {
         font-size: 26px;
