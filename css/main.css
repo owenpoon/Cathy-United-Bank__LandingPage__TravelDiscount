@@ -397,7 +397,7 @@ button.yellow-border:hover{
     color: #CCCCCC;
 }
 #third .banner-carousel .owl-item.active.center .banner-carousel-card article h3{
-    font-size: 15px;
+    font-size: 16px; line-height: 1.2;
 }
 #third .banner-carousel .owl-item.active.center .banner-carousel-card article p{
     font-size: 13px;
