@@ -11,6 +11,10 @@ h1, h2, h3, p, a, button{
     font-family: 'Source Sans Pro', sans-serif !important;
     font-weight: 500; 
 }
+h2{
+    margin-top: 0;
+    margin-bottom: 0;
+}
 span.block{
     display: block;
 }
@@ -193,7 +197,7 @@ section{
     position: relative;
 }
 #opening .jumbotron {
-    background: #83C67F;
+    background: #83C67F; margin-bottom: 0;
     width: 100%; height: 625px; 
     /*Inside Alignment*/
     display: flex; justify-content: flex-start;
@@ -229,11 +233,9 @@ img.family-in-banner{
 }
 
 #second h2{
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 48px;
-    letter-spacing: 2px;
-    padding-top: 1em;
+    font-weight: bold; font-size: 36px;
+    line-height: 48px; letter-spacing: 2px;
+    padding-top: 3em;
     word-spacing: -8px;
 }
 #second .content{
@@ -263,7 +265,7 @@ img.family-in-banner{
 #second .content .section-2::before{
     content: url(../img/leaves.svg);
     position: absolute;
-    transform: translate(52em, -3.5em);
+    transform: translate(52em, -3em);
 }
 #second .content .section-2::after{
     content: url(../img/family.svg);
@@ -309,14 +311,14 @@ img.family-in-banner{
 }
 
 div.logo{
-    width: 70px; height: 70px; margin: 0 .4em;
+    width: 80px; height: 80px; margin: 0 .3em;
     background: #FFF; border-radius: 100%;
     filter: drop-shadow(0px 1.42857px 12.8571px rgba(70, 140, 65, 0.21));
     /*Inside Alignment*/
     display: inline-flex; justify-content: center; align-items: center;
 }
 div.logo img{
-    width: 55px;
+    width: 63px;
 }
 button.yellow-bg, button.yellow-border{
     padding: 12px 27px; margin: 0 1em;
@@ -376,15 +378,15 @@ button.yellow-border:hover{
     background: rgba(255, 255, 255, .5);
 }
 #third .owl-carousel div.logo{
-    width: 55px; height: 55px; 
+    width: 60px; height: 60px; 
     display: inline-flex; margin-top: -2px;
 }
 #third .owl-carousel div.logo img{
-    width: 40px;
+    width: 45px;
 }
 #third .banner-carousel .owl-item .banner-carousel-card article{
     width: 85%; margin-left: 7px; 
-    padding-right: 1em; margin-top: 3px !;
+    padding-right: .5em; 
 }
 #third .banner-carousel .owl-item .banner-carousel-card article h3{
     font-size: 15px; letter-spacing: .5px;
@@ -514,8 +516,9 @@ img.cloud-3 {
     font-size: 36px;
     line-height: 48px;
     letter-spacing: 2px;
-    padding-top: 1.5em;
+    padding-top: 3em;
     word-spacing: 10px;
+    margin-top: 0;
 }
 
 footer#final{
@@ -856,7 +859,7 @@ footer .info p{
 
     #second .content .section-1::before {
         content: url(../img/leaves.svg);
-        position: absolute; right: 10px;
+        position: absolute; right: 30px;
         margin-top: -3.5em;
     }
     #second .content .section-2::before {
@@ -872,7 +875,7 @@ footer .info p{
         position: absolute;
         transform: none; 
         right: 80px;
-        margin-top: -4em;
+        margin-top: -3em;
     }
 
 }
@@ -910,6 +913,12 @@ footer .info p{
     header .navbar img.logo {
         width: 150px;
     }
+    section {
+        margin-top: -2em;
+    }
+    section#fifth{
+        margin-top: -6.5em;
+    }
     #opening .jumbotron {
         height: 670px;
         display: flex;
@@ -919,7 +928,7 @@ footer .info p{
         margin-left: 0;
         margin-top: 0;
         position: absolute;
-        top: 6em;
+        top: 7em;
     }
     h1.top-topic {
         font-weight: 500;
@@ -948,7 +957,7 @@ footer .info p{
         font-size: 26px;
         line-height: 35px;
         letter-spacing: 0;
-        padding-top: 0; 
+        padding-top: 3.5em;
     }
     #second .content .section-1 h3, 
     #second .content .section-2 h3 {
@@ -969,21 +978,19 @@ footer .info p{
         font-size: 15px;
     }
     #second .content .section-1 .logos{
-        margin-left: 1em;
+        position: relative; left: 1em;
+        margin-top: 1.2em;
     }
     #second .content .section-1 .logos .logo {
         margin-left: 0; 
     }
-    #second .logos{
-        margin-top: 1.2em;
-    }
     div.logo {
-        width: 45px;
-        height: 45px;
+        width: 50px;
+        height: 50px;
         margin: 0 5px;
     }
     div.logo img {
-        width: 32px;
+        width: 38px;
     }
     #second .content .section-1 .declaration, 
     #second .content .section-2 .declaration {
@@ -991,9 +998,9 @@ footer .info p{
     }
     #third h2 {
         font-size: 24px;
+        padding-top: 3.5em;
         letter-spacing: 0;
         line-height: 35px;
-        padding-top: 1em;
     }
     #third button.yellow-border{
         display: block;
@@ -1012,14 +1019,14 @@ footer .info p{
         font-size: 26px;
         letter-spacing: 0;
         line-height: 35px;
-        padding-top: 1em;
+        padding-top: 3.5em;
         margin-bottom: .75em;
     }
     #fifth h2 {
         font-size: 26px;
         letter-spacing: 0;
         line-height: 35px;
-        padding-top: 1em;
+        padding-top: 3.5em;
         margin-bottom: .75em;
         margin-top: -1em;
         word-spacing: normal;
@@ -1080,11 +1087,11 @@ footer .info p{
         color: #999999;
     }
     #third .owl-carousel div.logo {
-        width: 40px; height: 40px;
+        width: 45px; height: 45px;
         position: relative; top: 8px;
     }
     #third .owl-carousel div.logo img {
-        width: 30px;
+        width: 35px;
     }
     #third::after {
         transform: none;
@@ -1149,6 +1156,17 @@ footer .info p{
 
 @media only screen and (max-width: 1130px){
     
+    #second .content .section-1, #second .content .section-2 {
+        display: block; margin: auto;
+        width: 87%; height: inherit;
+        text-align: left; padding-bottom: 2em;
+    }
+    #second .content .section-1{
+        margin-bottom: 3.5em;
+    }
+    #second .login-and-advice {
+        margin-top: 3em;
+    }
     .notification .notification-container{
         background: #FFF; 
         width: 90%; height: 700px;
@@ -1158,6 +1176,24 @@ footer .info p{
         max-height: 470px;
     }
 
+}
+
+@media only screen and (min-width: 1130px) and (max-width: 1670px){
+   
+    #second .content .section-1, #second .content .section-2 {
+        width: 530px; height: inherit;
+        text-align: left; padding-bottom: 2em;
+    }
+    #second .content .section-1{
+        margin-bottom: 3.5em;
+    }
+    #second .content .section-1 .logos .logo {
+        width: 65px; height: 65px;
+    }
+    #second .content .section-1 .logos .logo img {
+        width: 52px;
+    }
+    
 }
 
 @media only screen and (max-width: 1320px){
@@ -1194,11 +1230,6 @@ footer .info p{
 
 @media only screen and (max-width: 1670px){
 
-    #second .content .section-1, #second .content .section-2 {
-        display: block; margin: auto;
-        width: 87%; height: inherit;
-        text-align: left; margin-bottom: 1.7em;
-    }
     #second .content::after,
     #second .content .section-2::after {
         display: none;
