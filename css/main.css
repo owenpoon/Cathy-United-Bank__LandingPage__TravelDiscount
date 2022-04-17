@@ -378,28 +378,29 @@ button.yellow-border:hover{
     background: rgba(255, 255, 255, .5);
 }
 #third .owl-carousel div.logo{
-    width: 60px; height: 60px; 
+    width: 55px; height: 55px; 
     display: inline-flex; margin-top: -2px;
 }
 #third .owl-carousel div.logo img{
-    width: 45px;
+    width: 43px;
 }
 #third .banner-carousel .owl-item .banner-carousel-card article{
     width: 85%; margin-left: 7px; 
-    padding-right: .5em; 
+    padding-right: 2em; 
 }
 #third .banner-carousel .owl-item .banner-carousel-card article h3{
     font-size: 15px; letter-spacing: .5px;
-    margin-bottom: 5px; margin-top: 3px;
+    margin-bottom: 2px; margin-top: 7px;
 }
 #third .banner-carousel .owl-item .banner-carousel-card article p{
     font-size: 8px; letter-spacing: .5px;
+    color: #CCCCCC;
 }
 #third .banner-carousel .owl-item.active.center .banner-carousel-card article h3{
-    font-size: 17px;
+    font-size: 15px;
 }
 #third .banner-carousel .owl-item.active.center .banner-carousel-card article p{
-    font-size: 14px;
+    font-size: 13px;
 }
 
 img.cloud-1{
@@ -1083,8 +1084,8 @@ footer .info p{
     .banner-carousel-card .inside-contents h3{
         color: #000;
     }
-    .banner-carousel .owl-item .banner-carousel-card article p {
-        color: #999999;
+    #third .banner-carousel .owl-item .banner-carousel-card article p {
+        color: #999999; margin-top: 4.75px;
     }
     #third .owl-carousel div.logo {
         width: 45px; height: 45px;
