@@ -183,13 +183,13 @@
   }
   .controls .left{
     position: absolute;
-    top: 41%; left: 3em;
+    top: 41%; left: 4.2em;
     transform: translate(-50%,-50%);
     z-index: 10;
   }
   .controls .right{
     position: absolute;
-    top: 41%; right: -0.5em;
+    top: 41%; right: .8em;
     transform: translate(-50%,-50%);
     z-index: 10;
   }

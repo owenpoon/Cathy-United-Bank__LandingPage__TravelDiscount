@@ -242,7 +242,7 @@ img.family-in-banner{
 #second .content::before{
     content: url(../img/green_decoration.svg);
     position: absolute; z-index: -1;
-    margin-top: 2em;
+    margin-top: 2em; width: 100%;
 }
 #second .content::after{
     content: url(../img/blue_decoration.svg);
@@ -503,7 +503,7 @@ img.cloud-3 {
 .carousel-inner-slider .info h3{
     color: #467443; font-size: 26px;
     letter-spacing: .25px; margin-top: 0;
-    margin-bottom: 15px;
+    margin-bottom: 15px; 
 }
 .carousel-inner-slider .info p{
     font-size: 20px; letter-spacing: .5px;
@@ -710,6 +710,9 @@ footer .info p{
 
 @media only screen and (max-width: 530px){
 
+    #second .content::before{
+        content: url(../img/green_decoration_mobile.svg);
+    }
     #second .login-and-advice {
         margin-top: 2em;
         display: flex;
@@ -1048,6 +1051,21 @@ footer .info p{
     }
     .advice {
         width: 92% !important;
+    }
+    #third .banner-carousel .owl-item.active.center .banner-carousel-card article h3 {
+        font-size: 16px;
+    }
+    #third .banner-carousel .owl-item.active.center .banner-carousel-card article p {
+        font-size: 12.5px; letter-spacing: .25px;
+    }
+    .carousel-inner-slider .info {
+        padding: 2em 1em;
+    }
+    .carousel-inner-slider .info h3 {
+        font-size: 24px; letter-spacing: .25px;
+    }
+    .carousel-inner-slider .info p{
+        font-size: 16px; letter-spacing: .25px;
     }
 
 }
